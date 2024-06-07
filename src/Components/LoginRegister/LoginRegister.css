@@ -1,0 +1,449 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+.color{
+	color:  #7b8295, #cacfea, #eed8ec, #edcebc, #f4c9a6, #ef5779, #e9859a,; 
+}
+
+.containerlogin{
+
+    /* background-color: #3C443A  ; */
+	background-image: url("https://res.cloudinary.com/dnp3ln4s4/image/upload/v1714924636/Untitled_design_kgzhc1.png");
+	background-color: #cccccc;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+    position: relative;
+    overflow: hidden;
+	
+    width: auto;
+    max-width: 200%;
+    min-height: 100vh;
+    height: 100%
+}
+.login {
+	
+	border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    position: absolute;
+    overflow: hidden;
+    max-width: 60%;
+    min-height: 75vh;
+    opacity: 0.95;
+    width: 55%;
+    margin-top: 74px;
+    margin-left: 360px;
+
+}
+
+h1 {
+	font-weight:500;
+	margin: 0;
+	
+}
+/* 
+h2 {
+	text-align: center;
+} */
+
+.forp {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+	font-size: 12px;
+}
+
+.fora {
+	color: #fefdfd;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.buttons {
+	border-radius: 20px;
+	border: 1px solid #000000;
+	background-color: #DBC1AD;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.buttons:active {
+	transform: scale(0.95);
+}
+
+.buttons:focus {
+	outline: none;
+}
+
+.buttons.ghost {
+	background-color: transparent;
+	border-color: #000000;
+	background-color: #222725;
+	color: white;
+	font-weight: lighter;
+}
+
+form {
+	background-color: #222725    ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+.logininput {
+	background-color: #eee;
+    border-color: black;
+    padding: 7px 15px;
+    margin: 8px 0;
+    width: 86%;
+	border-radius: 8px;
+}
+
+
+
+.form-login {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-login {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.login.right-panel-active .sign-in-login {
+	transform: translateX(100%);
+}
+
+.sign-up-login {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.login.right-panel-active .sign-up-login {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-login {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.login.right-panel-active .overlay-login{
+	transform: translateX(-100%);
+}
+
+.color{
+	color:  #7b8295, #cacfea, #eed8ec,#3c446e,#3b405b, #edcebc, #f4c9a6, #ef5779, #e9859a,; 
+}
+
+.overlay {
+	background: #B7BF9E ;
+	/* background: -webkit-linear-gradient(to right, #E7B5AC, #eeeaea,);
+	background-image: linear-gradient(to right, #355C7D , #6C5B7B   ,#C06C84, #F67280 , #F8B195   ); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #000000;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.login.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.login.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.login.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-login {
+	margin: 20px 0;
+}
+
+.social-login a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+/* footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+} */
+
+.forgot-password-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+  }
+  
+  .forgot-password-content {
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+	max-width: 400px;
+	width: 100%;
+  }
+  
+  .forgot-password-content input {
+	margin: 10px 0;
+	padding: 10px;
+	width: 100%;
+  }
+  
+  .forgot-password-content button {
+	margin: 10px;
+	padding: 10px 20px;
+  }
+  
+  /* Styles for the modals */
+.forgot-password-modal, .otp-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .forgot-password-content, .otp-content {
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+  }
+  
+  /* Styles for the modals */
+.forgot-password-modal, .otp-modal, .update-password-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .forgot-password-content, .otp-content, .update-password-content {
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+  }
+  
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .login {
+        width: 80%; /* Adjust width for smaller screens */
+        max-width: 100%; /* Allow full width on smaller screens */
+        margin-left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+    }
+
+    .form-login {
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    .logininput {
+        max-width: 100%; /* Take full width */
+    }
+
+    .overlay {
+        width: 100%;
+    }
+
+    .overlay-panel {
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    .forgot-password-content,
+    .otp-content {
+        max-width: 90%; /* Limit max width */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-login {
+        padding: 69px -31px;
+    }
+	.buttonsu{
+		border-radius: 20px;
+	border: 1px solid #000000;
+	background-color: #DBC1AD;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	}
+	.sign-in-login {
+		left: -30px;
+		width: 121%;
+		z-index: 2;
+	}
+	@media screen and (max-width: 768px) {
+		.buttonsu {
+			border-radius: 20px;
+			border: 1px solid #000000;
+			background-color: #DBC1AD;
+			color: #000000;
+			font-size: 12px;
+			font-weight: bold;
+			padding: 12px 45px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			transition: transform 80ms ease-in;
+			margin-left: 203px;
+			margin-top: 137px;
+			/* margin-left: 128px; */
+			padding-left: 43px;
+		}
+	}
+	.sign-up-login {
+		left: 0;
+		width: 50%;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.buttonsi{
+		    border-radius: 20px;
+			border: 1px solid #000000;
+			background-color: #DBC1AD;
+			color: #000000;
+			font-size: 12px;
+			font-weight: bold;
+			padding: 12px 45px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			transition: transform 80ms ease-in;
+			margin-left: 203px;
+			margin-top: 137px;
+			/* margin-left: 128px; */
+			padding-left: 43px;
+	}
+
+	
+	
+}
+
